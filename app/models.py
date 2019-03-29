@@ -4,6 +4,7 @@ from django.db import models
 class Institution(models.Model):
     inst_name = models.CharField(max_length = 60)
     inst_pic = models.ImageField(upload_to = 'institutions/')
+    location = models.CharField(max_length = 100)
 
     def __str__(self):
         return self.inst_name
